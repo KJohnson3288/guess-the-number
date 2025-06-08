@@ -2,7 +2,6 @@ body {
     padding: 0px;
     margin: auto;
     display: flexbox;
-    max-width: 1024px;
     height: 100vh;
 }
 
@@ -12,6 +11,20 @@ body {
 }
 
 #difficulty-container {
-    margin: 25% 0px;
+    margin: 25% auto;
+    box-shadow: 3px 3px 8px gray;
+}
+
+
+/* Game Page: User input Section */
+#input-section {
+    min-height: 400px;
+    margin: 25% auto;
+    box-shadow: 3px 3px 8px gray;
+}
+
+/* Results Section */
+#results-section {
+    min-height: 80vh;
     box-shadow: 3px 3px 8px gray;
 }
