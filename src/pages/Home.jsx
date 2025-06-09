@@ -5,14 +5,14 @@ export default function Home() {
     <div className="container text-center mt-5">
       
       
-      <div className="row container bg-light bg-gradient justify-content-center py-3" id="difficulty-container">
+      <div className="row container d-flex bg-light bg-gradient justify-content-center py-3" id="difficulty-container">
 
         <div class="row text-center my-4">
           <h3 class="display-3">Choose your difficulty: </h3>
         </div>
 
         {/* Easy Difficulty Button */}
-        <div className="row col-8 difficulty-btn">
+        <div className="row col-md-8 col-12 difficulty-btn">
           <div className="row">
             <Link to="/game?difficulty=easy" className="btn btn-dark bg-gradient"><h5 className="text-primary">EASY</h5></Link>
           </div>
@@ -23,7 +23,7 @@ export default function Home() {
         </div>
 
         {/* Medium Difficulty Button */}
-        <div className="row col-8 difficulty-btn">
+        <div className="row col-md-8  col-12 difficulty-btn">
           <div className="row">
             <Link to="/game?difficulty=medium" className="btn btn-dark bg-gradient"><h5 className="text-success">MEDIUM</h5></Link>
           </div>
@@ -34,7 +34,7 @@ export default function Home() {
         </div>
 
         {/* Hard Difficulty Button */}
-        <div className="row col-8 difficulty-btn">
+        <div className="row col-md-8 col-12 difficulty-btn">
           <div className="row">
             <Link to="/game?difficulty=hard" className="btn btn-dark bg-gradient"><h5 className="text-warning">HARD</h5></Link>
           </div>
@@ -45,13 +45,20 @@ export default function Home() {
         </div>
 
         {/* Impossible Difficulty Button */}
-        <div className="row col-8 difficulty-btn">
+        <div className="row col-md-8 col-12 difficulty-btn">
           <div className="row">
             <Link to="/game?difficulty=impossible" className="btn btn-dark bg-gradient"><h5 className="text-danger">IMPOSSIBLE</h5></Link>
           </div>
           
           <div className="row">
             <p className="card-text"><small className="text-body-secondary">Guess Between: 0 - 1,000,000</small></p>
+          </div>
+        </div>
+
+        {/* Results Page Link */}
+        <div className="row col-md-6 col-12 difficulty-btn my-3">
+          <div className="row">
+            <Link to="/Results" className="btn btn-dark bg-gradient"><h5 className="text-light">RESULTS</h5></Link>
           </div>
         </div>
         

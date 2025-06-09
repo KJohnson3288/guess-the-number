@@ -90,6 +90,25 @@ const GamePage = () => {
     setTries((prev) => prev + 1);
 
     if (numGuess === targetNumber) {
+
+      // Save results in object
+      const result = {
+        difficulty,
+        tries: tries + 1,
+        time: secondsElapsed,
+        timestamp: new Date().toISOString()
+      };
+
+      // Retrieve local storage array or create if doesn't exist
+      const existingResults = JSON.parse(localStorage.getItem('gameResults')) || [];
+
+      // Add results from current game
+      existingResults.push(result);
+
+      // Save updated list
+      localStorage.setItem('gameResults', JSON.stringify(existingResults));
+
+      // End game state
       setFeedback(`Correct! It took you ${tries + 1} tries.`);
       setGameOver(true);
       setIsRunning(false);
